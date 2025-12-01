@@ -63,7 +63,7 @@
 ## 🔬 Algorithm Workflow
 
 1. Data Loading Phase
-     Input Files:
+    - Input Files:
       ├── data_enhanced.txt      # Contains sentences with entities
       └── labels_enhanced.csv    # Maps entities to their labels
           ├── Column 1: entities (e.g., "tomato", "shirt", "Python")
@@ -75,7 +75,7 @@
   - Position Calculation: Character-level start and end positions are calculated for each entity
     
   - Training Format Conversion:
-       - TRAIN_DATA = [
+      - TRAIN_DATA = [
             ("I bought tomatoes", {"entities": [(10, 18, "FOOD")]}),
             ("Python is great", {"entities": [(0, 6, "TECH")]})
         ]
