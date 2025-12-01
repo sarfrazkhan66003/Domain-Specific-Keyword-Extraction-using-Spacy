@@ -62,24 +62,26 @@
 
 ## 🔬 Algorithm Workflow
 
-- 1. Data Loading Phase
+1. Data Loading Phase
      Input Files:
       ├── data_enhanced.txt      # Contains sentences with entities
       └── labels_enhanced.csv    # Maps entities to their labels
           ├── Column 1: entities (e.g., "tomato", "shirt", "Python")
           └── Column 2: labels (e.g., "FOOD", "CLOTH", "TECH")
      
-- 2. Preprocessing Phase
+2. Preprocessing Phase
   - Sentence Segmentation: Text is split into individual sentences using SpaCy's sentencizer
   - Entity Matching: Each word is checked against the label dictionary
   - Position Calculation: Character-level start and end positions are calculated for each entity
+    
   - Training Format Conversion:
-        TRAIN_DATA = [
+       - TRAIN_DATA = [
             ("I bought tomatoes", {"entities": [(10, 18, "FOOD")]}),
             ("Python is great", {"entities": [(0, 6, "TECH")]})
         ]
+    
   
-  - 3. Training Algorithm
+3. Training Algorithm
     - The system uses Stochastic Gradient Descent (SGD) with the following parameters:
       - Iterations: 20 epochs (configurable)
       - Dropout Rate: 0.2 (prevents overfitting)
@@ -97,11 +99,11 @@
         - 3. Print loss values
         - 4. Continue to next iteration
   
-  - 4. Model Persistence
+4. Model Persistence
     - Trained model is saved to disk with a custom name
     - Can be loaded later for inference without retraining
   
-  - 5. Testing & Inference
+5. Testing & Inference
     - User inputs test text
     - Model processes text and identifies entities
     - Results displayed with entity text, label, and position
