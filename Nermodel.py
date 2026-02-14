@@ -9,19 +9,22 @@ import random
 f = open("data.txt", "r",encoding='cp1252')
 paragraph = f.read()
 #reading label data
-labels = pd.read_csv(r'C:\Users\DELL\Desktop\Sarfu\PW Data Science\Project\Domain-Specific-Keyword-Extraction-using-Spacy\labels.csv')
+labels = pd.read_csv(r'C:\Users\DELL\OneDrive\Desktop\Sarfraz Khan\Data Science\Project DS\Domain-Specific-Keyword-Extraction-using-Spacy\labels.csv')
 data_dict = labels.set_index('entities')['labels'].to_dict()
 
 nlp = English()
 nlp.add_pipe(nlp.create_pipe('sentencizer')) # updated
+#nlp.add_pipe("sentencizer")
 doc = nlp(paragraph)
-sentences = [sent.string.strip() for sent in doc.sents]
+#sentences = [sent.string.strip() for sent in doc.sents]
+sentences = [sent.text.strip() for sent in doc.sents]
+
 
 inner_tuple = ()
 outer_tuple = ()
 outer_list = []
 for sentence in sentences:
-    wordList = re.sub("[^\w]", " ",  sentence).split()
+    wordList = re.sub(r"[^\w]", " ", sentence).split()
     for word in wordList:
         
         inner_dict = {}
