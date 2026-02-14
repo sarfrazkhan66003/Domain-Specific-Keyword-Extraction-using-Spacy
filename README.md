@@ -181,3 +181,60 @@
   - Process text through trained model
   - Display detected entities with details
   - Optional visualization
+
+## 🟢 Step 1 — Data Preparation
+- 📄 Text Data (data.txt)
+  - Contains raw sentences like:
+    carrot and potato grow underground.
+    pasta is fast food.
+    jeans is made of cloth.
+
+## 🏷 Label Data (labels.csv)
+- Contains mapping of words to labels:
+    | entities | labels |
+    | -------- | ------ |
+    | rice     | food   |
+    | mango    | food   |
+    | jeans    | cloth  |
+    | shirt    | cloth  |
+
+## 🧠 Model Type
+- This project builds:
+  🔥 Custom Named Entity Recognition Model
+  🏗 Built from scratch using spaCy blank pipeline
+  🎯 Domain-specific entity detection
+
+- We are NOT using:
+    - en_core_web_sm
+    - Pretrained models
+- Instead, we train our own custom model.
+
+## 💡 Key Learning Outcomes
+    ✔ Understanding NER architecture
+    ✔ Building training data manually
+    ✔ Using spaCy blank model
+    ✔ Training custom NLP pipeline
+    ✔ Saving & loading NLP models
+    ✔ Real-world NLP project implementation
+
+## 📊 Possible Improvements
+    ✨ Increase training data
+    ✨ Add more entity types
+    ✨ Use spaCy v3 training config
+    ✨ Convert into API using FastAPI
+    ✨ Deploy on cloud
+
+## 🏁 Conclusion
+- “This project demonstrates how raw text can be transformed into structured information using custom NLP modeling.” 🚀
+- It is a foundational NLP project showcasing:
+    - Machine Learning
+    - NLP Engineering
+    - Model Training
+    - Practical Implementation
+
+  <img width="1896" height="1079" alt="Screenshot 2026-02-14 121618" src="https://github.com/user-attachments/assets/1127bfa0-0520-4eb1-adf9-16c587623217" />
+
+ 
+# 👨‍💻 Author
+## Sarfraz Khan
+- Aspiring Data Scientist & NLP Enthusiast 🚀
